@@ -1,0 +1,19 @@
+{
+    "env": {
+        "browser": true,
+        "es6": true
+    },
+    "extends": [
+        "standard",
+        "plugin:vue/recommended"
+    ],
+    "rules": {
+        "vue/script-indent": "error",
+        "vue/component-name-in-template-casing": ["error", "kebab-case", {
+            "ignores": []
+        }]
+    },
+    "parserOptions": {
+        "sourceType": "module"
+    }
+}
