@@ -3,10 +3,10 @@
 ### Make sure you set up a connection to the database in .env
 
 ```
-- make install
-- make serve
-- make watch
-- make start
+make install
+make serve
+make watch
+make start
 ```
 
 #### Auth Admin:
@@ -16,7 +16,7 @@ email: admin@admin.io
 password: admin
 ```
 
-## Images
+## Preview
 
 ![Users List](https://raw.githubusercontent.com/leep0o/laravel-vuex/master/public/img/users-list.png)
 

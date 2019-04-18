@@ -15,7 +15,7 @@
                                             <b-input-group>
                                                 <b-form-input v-model="filter" placeholder="Type to Search"></b-form-input>
                                                 <b-input-group-append>
-                                                    <b-button :disabled="!filter" @click="filter = ''">Clear</b-button>
+                                                    <b-button variant="danger" :disabled="!filter" @click="filter = ''">Clear</b-button>
                                                 </b-input-group-append>
                                             </b-input-group>
                                         </b-form-group>
@@ -71,7 +71,7 @@
                                     </template>
 
                                     <template slot="actions" slot-scope="row">
-                                        <b-button size="sm" @click="row.toggleDetails">
+                                        <b-button size="sm" variant="success" @click="row.toggleDetails">
                                             {{ row.detailsShowing ? 'Hide' : 'Show' }} Details
                                         </b-button>
                                     </template>
