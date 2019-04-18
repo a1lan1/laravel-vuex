@@ -1,6 +1,6 @@
 ## Install & Start
 
-Убедитесь, что вы настроили подключение к бд в .env
+### Make sure you set up a connection to the database in .env
 
 ```
 - make install
