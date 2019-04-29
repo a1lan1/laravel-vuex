@@ -30,6 +30,7 @@ password: admin
 - [Bootstrap + Vue](https://bootstrap-vue.js.org)
 - [Theme Bootswatch](https://bootswatch.com)
 - [Spatie/laravel-permission](https://github.com/spatie/laravel-permission)
+- [Debugbar](https://github.com/barryvdh/laravel-debugbar)
 
 ## License
 

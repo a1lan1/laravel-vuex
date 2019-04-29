@@ -56,7 +56,7 @@
                                 <b-table
                                     show-empty
                                     stacked="md"
-                                    :items="items"
+                                    :items="users"
                                     :fields="fields"
                                     :current-page="currentPage"
                                     :per-page="perPage"
@@ -122,8 +122,8 @@
                     { key: 'created_at', label: 'Registration datetime' },
                     { key: 'actions', label: 'Actions' }
                 ],
-                totalRows: 1,
                 currentPage: 1,
+                totalRows: 0,
                 perPage: 5,
                 pageOptions: [5, 10, 15],
                 sortBy: null,
@@ -133,7 +133,7 @@
             }
         },
         computed: {
-            items: function () {
+            users: function () {
                 return this.$store.state.users.users
             },
             sortOptions() {
@@ -145,10 +145,6 @@
                     })
             }
         },
-        mounted() {
-            // Set the initial number of items
-            this.totalRows = this.items.length
-        },
         created () {
             this.setRoute()
             this.$store.dispatch('users/getUsers')
@@ -158,7 +154,6 @@
                 this.$store.dispatch('users/setRoute', this.route)
             },
             onFiltered(filteredItems) {
-                // Trigger pagination to update the number of buttons/pages due to filtering
                 this.totalRows = filteredItems.length
                 this.currentPage = 1
             }

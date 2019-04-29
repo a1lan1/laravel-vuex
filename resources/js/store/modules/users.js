@@ -4,7 +4,7 @@ export default {
     namespaced: true,
     state: {
         route: '',
-        users: {}
+        users: []
     },
     mutations: {
         setRoute(state, route) {
