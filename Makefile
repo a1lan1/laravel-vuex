@@ -15,3 +15,9 @@ watch:
 
 share:
 	valet start && valet share
+
+lint:
+	./node_modules/.bin/eslint --ext .js,.vue .
+
+lint-fix:
+	./node_modules/.bin/eslint --ext .js,.vue . --fix

@@ -3,13 +3,20 @@
 ### Make sure you set up a connection to the database in .env
 
 ```
+make start
 make install
 make serve
 make watch
-make start
 ```
 
-#### Auth Admin:
+#### ESLint
+
+```
+make lint
+make lint-fix
+```
+
+#### Auth Admin
 
 ```
 email: admin@admin.io

@@ -14,10 +14,10 @@ Vue.use(UsersList)
 const store = createStore()
 
 const config = {
-    store,
-    components: {
-        UsersList,
-    }
+  store,
+  components: {
+    UsersList
+  }
 }
 
 // const files = require.context('./', true, /\.vue$/i)
