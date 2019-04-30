@@ -20,9 +20,7 @@ password: admin
 
 ![Users List](https://raw.githubusercontent.com/leep0o/laravel-vuex/master/public/img/users-list.png)
 
-![Login Form](https://raw.githubusercontent.com/leep0o/laravel-vuex/master/public/img/login-form.png)
-
-![Reg Form](https://raw.githubusercontent.com/leep0o/laravel-vuex/master/public/img/reg-forn.png)
+![Reg Form](https://raw.githubusercontent.com/leep0o/laravel-vuex/master/public/img/reg-form.png)
 
 ## Packages
 

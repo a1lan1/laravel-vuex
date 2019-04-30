@@ -1,29 +1,32 @@
 import axios from 'axios'
 
+const route = '/users'
+
 export default {
     namespaced: true,
     state: {
-        route: '',
-        users: []
+        users: [],
+        totalRows: 0
     },
     mutations: {
-        setRoute(state, route) {
-            state.route = route
-        },
         setUsers(state, users) {
             state.users = users
+        },
+        setTotalRows(state, totalRows) {
+          state.totalRows = totalRows
         }
     },
     actions: {
-        setRoute(context, route) {
-            context.commit('setRoute', route)
-        },
-        getUsers(context, data) {
+        getUsers(context) {
             axios
-                .get(context.state.route)
+                .get(route)
                 .then(response => {
                     context.commit('setUsers', response.data)
+                    context.commit('setTotalRows', response.data.length)
                 })
+        },
+        setTotalRows(context, totalRows) {
+          context.commit('setTotalRows', totalRows)
         }
     }
 }
