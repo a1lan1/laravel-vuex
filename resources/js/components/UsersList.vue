@@ -13,11 +13,11 @@
                 <!-- User Interface controls -->
                 <b-row>
                   <b-col
-                    md="6"
+                    md="4"
                     class="my-1"
                   >
                     <b-form-group
-                      label-cols-sm="3"
+                      label-cols-md="2"
                       label="Filter"
                       class="mb-0"
                     >
@@ -40,11 +40,11 @@
                   </b-col>
 
                   <b-col
-                    md="6"
+                    md="4"
                     class="my-1"
                   >
                     <b-form-group
-                      label-cols-sm="3"
+                      label-cols-md="2"
                       label="Sort"
                       class="mb-0"
                     >
@@ -77,39 +77,11 @@
                   </b-col>
 
                   <b-col
-                    md="6"
+                    md="4"
                     class="my-1"
                   >
                     <b-form-group
-                      label-cols-sm="3"
-                      label="Sort direction"
-                      class="mb-0"
-                    >
-                      <b-input-group>
-                        <b-form-select
-                          slot="append"
-                          v-model="sortDirection"
-                        >
-                          <option value="asc">
-                            Asc
-                          </option>
-                          <option value="desc">
-                            Desc
-                          </option>
-                          <option value="last">
-                            Last
-                          </option>
-                        </b-form-select>
-                      </b-input-group>
-                    </b-form-group>
-                  </b-col>
-
-                  <b-col
-                    md="6"
-                    class="my-1"
-                  >
-                    <b-form-group
-                      label-cols-sm="3"
+                      label-cols-md="3"
                       label="Per page"
                       class="mb-0"
                     >
@@ -132,7 +104,6 @@
                   :filter="filter"
                   :sort-by.sync="sortBy"
                   :sort-desc.sync="sortDesc"
-                  :sort-direction="sortDirection"
                   @filtered="onFiltered"
                 >
                   <template
@@ -204,7 +175,7 @@ export default {
     return {
       fields: [
         { key: 'id' },
-        { key: 'name', label: 'Name', sortable: true, sortDirection: 'desc' },
+        { key: 'name', label: 'Name', sortable: true },
         { key: 'email', label: 'Email', sortable: true, class: 'text-center' },
         { key: 'created_at', label: 'Registration datetime' },
         { key: 'actions', label: 'Actions' }
@@ -214,7 +185,6 @@ export default {
       pageOptions: [5, 10, 15],
       sortBy: null,
       sortDesc: false,
-      sortDirection: 'asc',
       filter: null
     }
   },

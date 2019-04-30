@@ -9,11 +9,13 @@ make serve
 make watch
 ```
 
-#### ESLint
+#### ESLint & PHP CodeSniffer
 
 ```
 make lint
 make lint-fix
+make cs
+make cs-fix
 ```
 
 #### Auth Admin
@@ -34,6 +36,8 @@ password: admin
 - [Theme Bootswatch](https://bootswatch.com)
 - [Spatie/laravel-permission](https://github.com/spatie/laravel-permission)
 - [Debugbar](https://github.com/barryvdh/laravel-debugbar)
+- [ESLint](https://github.com/eslint/eslint)
+- [squizlabs/PHP_CodeSniffer](https://github.com/squizlabs/PHP_CodeSniffer)
 
 ## License
 

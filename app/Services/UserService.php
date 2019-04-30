@@ -31,7 +31,7 @@ class UserService
             return json_decode($users);
         }
 
-        $users =$this->user->with('roles')->get();
+        $users = $this->user->with('roles')->get();
 
         // store data into redis for next 24 hours
         Redis::setex('users.all', 60 * 60 * 24, $users);
